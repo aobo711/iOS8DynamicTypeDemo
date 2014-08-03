@@ -10,8 +10,8 @@ import UIKit
 
 class QuoteTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var quoteContentLabel: UILabel!
-    @IBOutlet weak var scenarioLabel: UILabel!
+    @IBOutlet var quoteContentLabel: UILabel
+    @IBOutlet var dateLabel: UILabel
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,13 +24,13 @@ class QuoteTableViewCell: UITableViewCell {
         quoteContentLabel.accessibilityLabel = "Quote Content"
         quoteContentLabel.accessibilityValue = quote.content
         
-        scenarioLabel.text = "- \(quote.scenario)"
-        scenarioLabel.accessibilityLabel = "Quote Scenario"
-        scenarioLabel.accessibilityValue = quote.scenario
+        dateLabel.text = quote.date
+        dateLabel.accessibilityLabel = "Quote Scenario"
+        dateLabel.accessibilityValue = quote.date
         
         
-        quoteContentLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        scenarioLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+//        quoteContentLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+//        dateLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
     }
 
 }
